@@ -1,3 +1,15 @@
+## Basic
+
+In JS, there are primitive data types and reference data types. Primitive data types are referenced by value while the non-primitive data types point to memory addresses.
+
+A function is a process which takes some input, called arguments, and produces some output called a return value. Functions may serve the following purposes:
+
+- ***Mapping***: Produce some output based on given inputs. A function maps input values to output values.
+- ***Procedures***: A function may be called to perform a sequence of steps. The sequence is known as a procedure, and programming in this style is known as procedural programming.
+- ***I/O***: Some functions exist to communicate with other parts of the system, such as the screen, storage, system logs, or network.
+
+
+
 ## Context vs. Scope
 
 Context and scope are not the same. 
@@ -65,6 +77,20 @@ function myClosure() {
     };
 }
 </code></pre>
+
+<hr />
+
+## Pure functions
+
+A pure function is a function which given the same input, will always return the same output. Also, it produces no side effects (e.g. saving the value to disk or logging to the console), which means that it can't alter any external state.
+
+Pure functions have many beneficial properties, and form the foundation of functional programming.
+
+## Functional programming
+
+Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects. Functional programming is declarative rather than imperative, and application state flows through pure functions. Contrast with object oriented programming, where application state is usually shared and colocated with methods in objects.
+
+Functional programming is a programming paradigm, meaning that it is a way of thinking about software construction based on some fundamental, defining principles (listed above). Other examples of programming paradigms include object oriented programming and procedural programming.
 
 <hr />
 
