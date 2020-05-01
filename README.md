@@ -8,8 +8,6 @@ A function is a process which takes some input, called arguments, and produces s
 - ***Procedures***: A function may be called to perform a sequence of steps. The sequence is known as a procedure, and programming in this style is known as procedural programming.
 - ***I/O***: Some functions exist to communicate with other parts of the system, such as the screen, storage, system logs, or network.
 
-
-
 ## Context vs. Scope
 
 Context and scope are not the same. 
@@ -40,8 +38,6 @@ In the example above, this is the person object that "owns" the fullName functio
 
 In other words, this.firstName means the firstName property of this object.
 
-<hr />
-
 ## The JavaScript call() Method
 
 The call() method is a predefined JavaScript method.
@@ -51,8 +47,6 @@ It can be used to invoke (call) a method with an owner object as an argument (pa
 With call(), an object can use a method belonging to another object.
 
 person.fullName.call(person1); // Will return "John Doe"
-
-<hr />
 
 ## Closure
 
@@ -78,8 +72,6 @@ function myClosure() {
 }
 </code></pre>
 
-<hr />
-
 ## Pure functions
 
 A pure function is a function which given the same input, will always return the same output. Also, it produces no side effects (e.g. saving the value to disk or logging to the console), which means that it can't alter any external state.
@@ -94,6 +86,26 @@ Functional programming is a programming paradigm, meaning that it is a way of th
 
 <hr />
 
+## Event loop, callback, promises, async await, RxJs observables
+
+- Both the Browser and NodeJS are always running a single threaded event loop to run our code.
+    1. Go around running all of synchronous code && queueing up asynchronous events to be called back later.
+        - If it is a macro task (setTimeout, setInterval) it will be executed on the next event loop.
+        - If it is a micro task (fulfilled promise) then it will be called back before the start of the next event loop.
+
+- Higher order function, is a function that receives another function as its argument. And the function that we're passing in as the argument is called Callback.
+
+- Callback, is a function that is to be executed after another function has finished executing.
+
+- Promise, is an object that may produce a single value some time in the future, it may be in one of 3 possible states: fulfilled, rejected, or pending.
+
+- Async Await, make our asynchronous code read like synchronous code.
+
+- RxJS is a library for composing asynchronous and event-based programs by using observable sequences.
+    - Observables are lazy Push collections of multiple values.
+
+<hr />
+
 ## Types of Patterns
 
 - Creational Design Patterns
@@ -104,8 +116,6 @@ Functional programming is a programming paradigm, meaning that it is a way of th
 
 - Structural Design Patterns
     - And lastly, these patterns focus on class and object composition. They can be used to compose interfaces through inheritance and define ways to compose multiple objects in order to achieve new functionality.
-
-<hr />
 
 ## Prototype Pattern
 
@@ -130,8 +140,6 @@ The biggest benefit of using the pattern in JavaScript is the performance boost 
     - If we instead defined them inside the Warrior scope, then they are not the same, so essentially JavaScript has created another copy of the supposedly same method for each instance.
 - Variation:
     - The Revealing Prototype Pattern provides a way to add visibility (public versus private) to members
-
-<hr />
 
 ## Module Pattern
 
